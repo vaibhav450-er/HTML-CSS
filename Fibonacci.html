@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+
+    Enter Number:
+    <input type="number" id="num" placeholder="Enter count">
+    <br><br>
+
+    <button onclick="generateFibo()">Generate</button>
+    <br><br>
+
+    Result:
+    <textarea id="result" rows="4" cols="30" readonly></textarea>
+
+    <script>
+        const generateFibo = () => {
+            let num = document.getElementById("num").value;
+            let result = document.getElementById("result");
+
+            num = Number(num);
+
+            if (isNaN(num) || num <= 0) {
+                result.value = "Please enter a valid number";
+                return;
+            }
+
+            let a = 0, b = 1;
+            let series = "";
+
+            for (let i = 1; i <= num; i++) {
+                series += a + " ";
+                let next = a + b;
+                a = b;
+                b = next;
+            }
+
+            result.value = series;
+        };
+    </script>
+
+</body>
+</html>

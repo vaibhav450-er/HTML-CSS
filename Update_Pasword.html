@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+</head>
+<body>
+
+<h2>Update Password</h2>
+
+<!-- Password inputs -->
+Password:
+<input type="password" id="p1"><br><br>
+
+Re-enter Password:
+<input type="password" id="p2"><br><br>
+
+<!-- Buttons -->
+<button onclick="checkPassword()">Update</button>
+<button type="reset">Reset</button>
+
+<!-- Message -->
+<p id="message"></p>
+
+<hr>
+
+<h2>Address</h2>
+
+<!-- Permanent Address -->
+Permanent Address:<br>
+<textarea id="addr1"></textarea><br><br>
+
+<!-- Checkbox -->
+<input type="checkbox" onclick="copyAddr()"> Same Address<br><br>
+
+<!-- Temporary Address -->
+Temporary Address:<br>
+<textarea id="addr2"></textarea>
+
+<script>
+
+// Function to check password
+function checkPassword() {
+
+    var pass1 = document.getElementById("p1").value;
+    var pass2 = document.getElementById("p2").value;
+
+    if(pass1 == "" || pass2 == "") {
+        document.getElementById("message").innerHTML = "Enter both passwords";
+    }
+    else if(pass1 != pass2) {
+        document.getElementById("message").innerHTML = "Passwords do not match";
+    }
+    else {
+        document.getElementById("message").innerHTML = "";
+        alert("Password updated successfully");
+    }
+}
+
+// Function to copy address
+function copyAddr() {
+
+    var permanent = document.getElementById("addr1").value;
+    var temporary = document.getElementById("addr2");
+    var check = document.querySelector("input[type='checkbox']");
+
+    if(check.checked) {
+        temporary.value = permanent;
+    } else {
+        temporary.value = "";
+    }
+}
+
+</script>
+
+</body>
+</html>

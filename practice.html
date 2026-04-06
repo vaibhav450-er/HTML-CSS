@@ -6,42 +6,31 @@
   <title>Document</title>
 </head>
 <body>
-  <label for="num">Enter Number</label>
-  <input type="number" id="num" autofocus required>
+  <input type="text" id="num">
+  <button onclick="fibo()">generate</button>
+  <textarea id="result"></textarea>
 
-  <label for="result">Result</label>
-  <input type="text" id="result">
+  ><Script>
+    const fibo=()=>{
 
-  <button onclick="calculate()">calculate factorial </button>
-
-  <script>
-    
-
-    const factorial=(n)=>{
-      let fact=1;
-      for(let i=1;i<=n;i++){
-        fact*=i;
-      }
-      return fact;
-    }
-
-    const calculate=()=>{
-      let num=document.getElementById("num").value;
-      let result=document.getElementById("result");
-
-      if(num===""){
-        result.value="Enter a valid number";
-      }
-
-      if(num<0){
-        result.value="Enter a positive number";
-      }
-
-      let res=factorial(num);
-      result.value=res;
-
+    let num=document.getElementById("num").value;
+    let result=document.getElementById("result");
+    num=Number(num);
+    let a=0;
+    let b=1;
+    let c;
+    let series="";
+    for(let i=1;i<=num;i++){
+      series=series+a+" ";
+      c=a+b;
+      a=b;
+      b=c;
 
     }
-  </script>
+    result.value=series;
+
+
+    };
+  </Script>
 </body>
 </html>

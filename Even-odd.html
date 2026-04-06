@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Odd Even Checker</title>
+</head>
+<body>
+
+    Enter Number:
+    <input type="number" id="num" placeholder="Enter number">
+    <br><br>
+
+    <button onclick="checkOddEven()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+        const checkOddEven = () => {
+            let num = document.getElementById("num").value;
+            let result = document.getElementById("result");
+
+            num = Number(num);
+
+            if (num === "") {
+                result.innerText = "Please enter a number";
+                return;
+            }
+
+            if (num % 2 === 0) {
+                result.innerText = "Even Number";
+            } else {
+                result.innerText = "Odd Number";
+            }
+        };
+    </script>
+
+</body>
+</html>
