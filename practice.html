@@ -1,34 +1,18 @@
 <!DOCTYPE html>
-<html>
-
-<body>
-  <h2>The XMLHttpRequest Object</h2>
-  <p id="demo"></p>
-  <form>
-    <label>Name</label><input name="fnm" />
-    <label>Age</label><input name="ag" />
-
-    <button type="button" onclick="loadDoc()">Send Form data </button>
-  </form>
-  <script>
-    function loadDoc() {
-      var form = document.querySelector('form');
-      var data = new URLSearchParams(new FormData(form)).toString()
-
-      console.log(data);
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-
-          document.getElementById("demo").innerHTML = "Data    inserted"
-        }
-      };
-
-      xhttp.open("POST", "ejson.php", true);
-      xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      xhttp.send(data);
-    }
-  </script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: pink;">
+  <h1 class="head" style="color: yellow;">i am vaibhav from vita</h1>
+  <p class="para" style="color: brown;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolores!</p>
+  <p class="para" style="color: brown;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolores!</p>
+  <p class="para" style="color: brown;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolores!</p>
+  <h3 id="hero">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque exercitationem enim neque mollitia illum reprehenderit! Natus consequuntur suscipit vitae cumque voluptatibus nobis, incidunt excepturi cum alias harum eaque possimus nesciunt!</h3>
+  <h4 class="er">djccskcscskskoswiowdkdcnjkc</h4>
+  <!-- <script src="script.js"></script> -->
+   <script src="script.js"></script>
 </body>
-
 </html>
