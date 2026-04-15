@@ -6,13 +6,24 @@
   <title>Document</title>
 </head>
 <body style="background-color: pink;">
-  <h1 class="head" style="color: yellow;">i am vaibhav from vita</h1>
-  <p class="para" style="color: brown;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolores!</p>
-  <p class="para" style="color: brown;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolores!</p>
-  <p class="para1" style="color: brown;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, dolores!</p>
-  <h3 id="hero">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque exercitationem enim neque mollitia illum reprehenderit! Natus consequuntur suscipit vitae cumque voluptatibus nobis, incidunt excepturi cum alias harum eaque possimus nesciunt!</h3>
-  <h4 class="er">djccskcscskskoswiowdkdcnjkc</h4>
-  <!-- <script src="script.js"></script> -->
-   <script src="DomQuestion.js"></script>
+ <button onclick="console.log('btn was clicked');alert('Hello')">Click Me!</button>
+ <button ondblclick="console.log('btn was double clicked');">Click Me!</button>
+   <script src="Events.js"></script>
+   
+   <!-- <div onmouseover="document.write('you are inside div')" style="width: 200px;
+    height: 200px; color: white; background-color: blue;">This is div </div> -->
+
+    <div onmouseover="onmouse()" id="box"
+style="width: 200px; height: 200px; color: white; background-color: blue;">
+  This is div
+</div>
+
+<p id="msg"></p>
+
+<script>
+  function onmouse(){
+    document.getElementById("msg").innerHTML = "You are inside div";
+  }
+</script>
 </body>
 </html>
